@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 20.Þub.2023 23:13:31 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="JTask1.1" dynamic-insert="false" dynamic-update="false" mutable="true" name="Customerr" optimistic-lock="version" polymorphism="implicit" schema="public" select-before-update="false" table="customerr">
+        <id name="id" type="string">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="2000" name="name"/>
+        </property>
+        <property generated="never" lazy="false" name="surname" optimistic-lock="true" type="string" unique="false">
+            <column length="2000" name="surname"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="2000" name="email"/>
+        </property>
+        <property generated="never" lazy="false" name="phone" optimistic-lock="true" type="string" unique="false">
+            <column length="2000" name="phone"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="accountts" optimistic-lock="true" sort="unsorted" table="accountt">
+            <key on-delete="noaction">
+                <column length="2000" name="customer_id"/>
+            </key>
+            <one-to-many class="Accountt" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="addressses" optimistic-lock="true" sort="unsorted" table="addresss">
+            <key on-delete="noaction">
+                <column length="2000" name="customer_id"/>
+            </key>
+            <one-to-many class="Addresss" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="phonees" optimistic-lock="true" sort="unsorted" table="phonee">
+            <key on-delete="noaction">
+                <column length="2000" name="customer_id"/>
+            </key>
+            <one-to-many class="Phonee" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

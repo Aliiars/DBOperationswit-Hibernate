@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+
+
+<table-filter match-catalog="JTask1.1" match-schema="public"
+		match-name="customerr" />
+	<table-filter match-catalog="JTask1.1" match-schema="public"
+		match-name="accountt" />
+	<table-filter match-catalog="JTask1.1" match-schema="public"
+		match-name="addresss" />
+	<table-filter match-catalog="JTask1.1" match-schema="public"
+		match-name="phonee" />
+	<table catalog="JTask1.1" schema="public" name="accountt">
+		<primary-key></primary-key>
+		<column name="id"></column>
+		<column name="customer_id"></column>
+		<column name="latest transaction"></column>
+		<column name="iban"></column>
+		<column name="balance"></column>
+		<column name="last wrong login"></column>
+	</table>
+	<table catalog="JTask1.1" schema="public" name="addresss">
+		<column name="id"></column>
+		<column name="customer_id"></column>
+		<column name="city"></column>
+		<column name="country"></column>
+		<column name="post code"></column>
+	</table>
+	<table catalog="JTask1.1" schema="public" name="customerr">
+		<column name="id"></column>
+		<column name="name"></column>
+		<column name="phone"></column>
+		<column name="surname"></column>
+		<column name="email"></column>
+	</table>
+	<table catalog="JTask1.1" schema="public" name="phonee">
+		<column name="id"></column>
+		<column name="phoneime"></column>
+		<column name="customer_id"></column>
+		<column name="number"></column>
+	</table>
+</hibernate-reverse-engineering>

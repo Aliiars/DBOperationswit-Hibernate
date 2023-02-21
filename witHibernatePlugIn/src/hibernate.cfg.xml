@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">cdata.jdbc.postgresql.PostgreSQLDriver</property>
+        <property name="hibernate.connection.password">2451</property>
+        <property name="hibernate.connection.url">jdbc:postgresql:Database=JTask1.1</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    </session-factory>
+</hibernate-configuration>
+
+<hibernate-configuration>
+  <session-factory name="id">
+    <property name="hibernate.connection.driver_class">
+      cdata.postgresql.PostgreSQLDriver
+    </property>
+    <property name="hibernate.connection.url">
+      jdbc:postgresql:User=postgres;Password=2451;Database=JTask1.1;Server=127.0.0.1;Port=5432;<!--?xml version="1.0" encoding="UTF-8"?-->
+    </property>
+    <property name="hibernate.dialect">
+      org.hibernate.dialect.SQLServerDialect
+    </property>
+    
+    <mapping resource="Customerr.hbm.xml"></mapping> 
+    </session-factory>
+</hibernate-configuration>
