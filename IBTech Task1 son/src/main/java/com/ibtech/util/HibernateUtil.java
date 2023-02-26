@@ -26,7 +26,7 @@ public class HibernateUtil {
 				// Hibernate settings equivalent to hibernate.cfg.xml's properties
 				Properties settings = new Properties();
 				settings.put(Environment.DRIVER, "org.postgresql.Driver");
-				settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/JTask1.1/postgres?useSSL=false");
+				settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/postgres?useSSL=false");
 				settings.put(Environment.USER, "postgres");
 				settings.put(Environment.PASS, "2451");
 				settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");

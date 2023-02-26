@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "address")
+
 public class Address {
 	
 	@Id
@@ -124,6 +124,8 @@ public class Address {
 	public String toString() {
 		return "Address [id=" + id + ", country=" + country + ", city=" + city + ", district=" + district + ", street="
 				+ street + ", zipCode=" + zipCode + ", email=" + email + ", customer=" + customer + "]";
+		
+		
 	}
 	
 	
